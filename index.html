@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="icon"><ion-icon name="home"></ion-icon></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="people"></ion-icon></span>
+                    <span class="title">Usuario</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
+                    <span class="title">Messagens</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="settings"></ion-icon></span>
+                    <span class="title">Configurações</span>
+                </a>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock"></ion-icon></ion-icon></span>
+                        <span class="title">Senha</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-in"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </li>
+        </ul>
+    </div>
+    <script src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"> </script>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+            list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+    </script>
+</body>
+</html>
